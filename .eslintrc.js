@@ -3,7 +3,9 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "plugin:react/recommended",
+    "extends": [
+        "airbnb-base"
+    ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"

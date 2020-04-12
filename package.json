@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint"
+    "test": "eslint",
+    "lint": "./node_modules/.bin/eslint ./"
   },
   "author": "ariel",
   "license": "ISC",
   "dependencies": {
+    "airbnb": "0.0.2",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-promise": "^4.2.1",
     "express": "^4.17.1",
     "firebase": "^7.14.0",
     "firebase-admin": "^8.10.0",
@@ -18,7 +22,19 @@
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-react": "^7.19.0",
     "install": "^0.13.0"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCETeam14/SCE_Team_14.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SCETeam14/SCE_Team_14/issues"
+  },
+  "homepage": "https://github.com/SCETeam14/SCE_Team_14#readme"
 }
