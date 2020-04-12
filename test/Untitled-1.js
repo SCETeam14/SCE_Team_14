@@ -1,4 +1,4 @@
-const addNumbers = require('../../test/function addNumbers(num1, num2) {.js');
+const addNumbers = require('../../test/addNumbers.js');
 
 describe('Test my add function', () => {
   it('add two positive numbers', () => {
