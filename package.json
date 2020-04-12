@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint"
+    "lint": "./node_modules/.bin/eslint ./"
   },
   "author": "ariel",
   "license": "ISC",
