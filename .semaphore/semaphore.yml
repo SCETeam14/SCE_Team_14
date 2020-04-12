@@ -8,19 +8,7 @@ blocks:
   - name: test
     task:
       jobs:
-        - name: Test
-          commands:
-            - checkout
-            - sem-version node 12
-            - cache restore
-            - npm install
-            - cache store
-            - npm run build --if-present
-            - npm test
-  - name: lintee
-    task:
-      jobs:
-        - name: eslinter
+        - name: eslint
           commands:
             - checkout
             - sem-version node 12
