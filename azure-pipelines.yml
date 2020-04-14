@@ -21,17 +21,3 @@ steps:
     npm install
     npm test
   displayName: 'npm install and test'
-  
-- task: Npm@1
-  inputs:
-   command: custom
-   customCommand: 'run lint'
-  displayName: Run Eslint
-
-  continueOnError: true
-
-- task: Npm@1
-  inputs:
-   command: custom
-   customCommand: 'run test'
-  displayName: Run  Tests
