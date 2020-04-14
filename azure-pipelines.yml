@@ -10,6 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
@@ -21,14 +22,14 @@ steps:
     npm test
   displayName: 'npm install and build'
   
-  - task: Npm@1
+- task: Npm@1
   inputs:
-    command: custom
-    customCommand: 'run lint'
-  displayName: Run ESLint
-  
-  - task: Npm@1
+   command: custom
+   customCommand: 'run lint'
+  displayName: Run Eslint
+
+- task: Npm@1
   inputs:
-    command: custom
-    customCommand: 'test'
+   command: custom
+   customCommand: 'test'
   displayName: Run Tests
