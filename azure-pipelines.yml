@@ -28,6 +28,8 @@ steps:
    customCommand: 'run lint'
   displayName: Run Eslint
 
+  continueOnError: true
+
 - task: Npm@1
   inputs:
    command: custom
