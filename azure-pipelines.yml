@@ -33,5 +33,5 @@ steps:
 - task: Npm@1
   inputs:
    command: custom
-   customCommand: 'test'
-  displayName: Run Tests
+   customCommand: 'jest addNumbers'
+  displayName: Run jest Tests
