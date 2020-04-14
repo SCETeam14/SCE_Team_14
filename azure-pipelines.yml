@@ -20,7 +20,7 @@ steps:
 - script: |
     npm install
     npm test
-  displayName: 'npm install and build'
+  displayName: 'npm install and test'
   
 - task: Npm@1
   inputs:
