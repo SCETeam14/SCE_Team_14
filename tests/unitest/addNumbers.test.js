@@ -1,5 +1,5 @@
 
-const addNumbers = require('../../src/addNumbers.js');
+const addNumbers = require('../SCE_Team_14/src/addNumbers.js');
 
 describe('Test my add function', () => {
   it('add two positive numbers', () => {
