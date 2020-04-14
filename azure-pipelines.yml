@@ -4,12 +4,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- arielchernis-patch-1
+- master
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
@@ -19,16 +20,18 @@ steps:
 - script: |
     npm install
     npm test
-  displayName: 'npm install and build'
+  displayName: 'npm install and test'
   
-  - task: Npm@1
+- task: Npm@1
   inputs:
-    command: custom
-    customCommand: 'run lint'
-  displayName: Run ESLint
-  
-  - task: Npm@1
+   command: custom
+   customCommand: 'run lint'
+  displayName: Run Eslint
+
+  continueOnError: true
+
+- task: Npm@1
   inputs:
-    command: custom
-    customCommand: 'test'
-  displayName: Run Tests
+   command: custom
+   customCommand: 'run test'
+  displayName: Run  Tests
