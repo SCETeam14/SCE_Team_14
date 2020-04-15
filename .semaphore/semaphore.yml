@@ -16,4 +16,4 @@ blocks:
             - npm install
             - cache store
             - npm run build --if-present
-            - npm run lint-- --fix
+            - npm run lint -- --fix
