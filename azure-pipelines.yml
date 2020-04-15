@@ -22,13 +22,13 @@ steps:
     npm test
   displayName: 'npm install and test'
   
-- task: Npm@1
-  inputs:
-   command: custom
-   customCommand: 'run lint'
-  displayName: Run Eslint
+#- task: Npm@1
+ # inputs:
+  # command: custom
+   #customCommand: 'run lint'
+  #displayName: Run Eslint
 
-  continueOnError: true
+  #continueOnError: true
 
 - task: Npm@1
   inputs:
