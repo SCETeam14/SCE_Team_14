@@ -22,4 +22,13 @@ agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
-blocks: []
+blocks:
+  - name: Integ
+    dependencies: []
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - '--npm ci'
+            - '--npm test'
+            - '--npm run lint -- --fix'
