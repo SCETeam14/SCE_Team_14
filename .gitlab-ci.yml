@@ -1,0 +1,14 @@
+before_script:
+  - npm i -g firebase-tools
+  deploy-functions:
+  stage: deploy
+  script:
+    - cd functions
+    - npm install
+    - cd ..
+    - firebase deploy --only functions --token $FIREBASE_TOKEN
+  only:
+    refs:
+      - arielchernis-patch-1
+    changes:
+      - functions/**/*
