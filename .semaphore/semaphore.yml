@@ -1,22 +1,20 @@
-name: Node Continuous Integration
-'on':
-  push:
-    branches:
-      - arielchernis-patch-1
-jobs:
-  test_pull_request:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm ci
-      - run: npm test
-      - run: npm run lint -- --fix
 version: v1.0
+name: Test MyApp
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
-blocks: []
+
+blocks:
+  - name: Test
+    task:
+      jobs:
+        - name: Test
+          commands:
+            - checkout
+            - sem-version node 12
+            - cache restore
+            - npm install
+            - cache store
+            - npm run build --if-present
+            - npm test
