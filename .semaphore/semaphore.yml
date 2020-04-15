@@ -16,7 +16,7 @@ jobs:
         with:
           args: deploy --only hosting
         env:
-          FIREBASE_TOKEN: '${{ secrets.FIREBASE_TOKEN }} - echo "run 3/3"'
+          FIREBASE_TOKEN: '${{ secrets.FIREBASE_TOKEN }}'
 version: v1.0
 agent:
   machine:
