@@ -4,33 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "lint": "eslint --fix --ext .js,.jsx .",
-    //"lint": "./node_modules/.bin/eslint ",
-    "test": "jest"
-=======
     "dev": "nodemon src/index.js",
     "test": "mocha test/*.spec.js --color",
-    "lint": "eslint src/*.js --color "
->>>>>>> circleci-project-setup
+    "lint": "eslint src/*.js --color ",
+	"start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "eslint-config-airbnb": "^18.1.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@typescript-eslint/eslint-plugin": "^2.28.0",
-    "@typescript-eslint/parser": "^2.28.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.19.0",
-    "jest": "^25.3.0"
-  }
-=======
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "chai": "^4.2.0",
@@ -50,5 +34,4 @@
     "url": "https://github.com/SCETeam14/SCE_Team_14/issues"
   },
   "homepage": "https://github.com/SCETeam14/SCE_Team_14#readme"
->>>>>>> circleci-project-setup
 }
