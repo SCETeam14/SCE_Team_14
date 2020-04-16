@@ -10,6 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+<<<<<<< HEAD
+=======
+
+>>>>>>> circleci-project-setup
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
@@ -19,6 +23,7 @@ steps:
 - script: |
     npm install
     npm test
+<<<<<<< HEAD
   displayName: 'npm install and build'
   
   - task: Npm@1
@@ -32,3 +37,20 @@ steps:
     command: custom
     customCommand: 'test'
   displayName: Run Tests
+=======
+  displayName: 'npm install and test'
+  
+- task: Npm@1
+  inputs:
+   command: custom
+   customCommand: 'run lint'
+  displayName: Run Eslint
+
+  #continueOnError: true
+
+- task: Npm@1
+  inputs:
+   command: custom
+   customCommand: 'run test'
+  displayName: Run  Tests
+>>>>>>> circleci-project-setup
