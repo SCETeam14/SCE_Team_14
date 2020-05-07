@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon src/index.html",
     "test": "mocha test/*.spec.js --color",
-    "lint": "eslint src/*.js --color ",
-    "start": "node src/index.js"
+    "lint": "eslint src/*.html --color ",
+    "start": "node src/index.html"
   },
   "author": "",
   "license": "ISC",
