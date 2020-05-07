@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.html",
     "test": "mocha test/*.spec.js --color",
-    "lint": "eslint src/*.html --color ",
+    "lint": "eslint src/*.js --color ",
     "start": "node src/index.html"
   },
   "author": "",
