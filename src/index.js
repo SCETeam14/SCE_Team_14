@@ -2,9 +2,11 @@ onst express = require('express')
 const app_port = process.env.PORT || 3000
 const app = express()
 
-document.write("<h1>Super-sami!</h1>");
-document.write("<hr/>");
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write('Hello World!'); //write a response to the client
+  res.end(); //end the response
+}).listen(8080); //the server object listens on port 8080
 
-app.listen(app_port)
-console.log(`app is running. port: ${app_port}`)
-console.log(`http://127.0.0.1:${app_port}/`)
+
