@@ -1,8 +1,9 @@
+const app_port = process.env.PORT || 5000
 var http = require('http'),
     fs = require('fs');
 
 
-fs.readFile('./src/index1.html', function (err, html) {
+fs.readFile('./index1.html', function (err, html) {
     if (err) {
         throw err; 
     }       
@@ -10,5 +11,6 @@ fs.readFile('./src/index1.html', function (err, html) {
         response.writeHeader(200, {"Content-Type": "text/html"});  
         response.write(html);  
         response.end();  
-    }).listen(8000);
+    }).listen(process.env.PORT || 5000)
+    
 });
