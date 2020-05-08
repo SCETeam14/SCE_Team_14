@@ -6,3 +6,4 @@ app.get('/', (req, res) => {
 })
 app.listen(app_port)
 console.log(`app is running. port: ${app_port}
+console.log(`http://127.0.0.1:${app_port}/`)
