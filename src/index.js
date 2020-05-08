@@ -1,10 +1,8 @@
-var http = require('http');
-var fs = require('fs');
-
-http.createServer(function(req, res){
-    fs.readFile('index1.html',function (err, data){
-        res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
-        res.write(data);
-        res.end();
-    });
-}).listen(8080);
+const express = require('express')
+const app_port = process.env.PORT || 3000
+const app = express()
+app.get('/', (req, res) => {
+ res.send('Hello World')
+})
+app.listen(app_port)
+console.log(`app is running. port: ${app_port}
