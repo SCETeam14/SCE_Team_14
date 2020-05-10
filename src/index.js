@@ -1,9 +1,33 @@
-const express = require('express')
-const app_port = process.env.PORT || 3000
-const app = express()
-app.get('/', (req, res) => {
- res.send('Hello World')
-})
-app.listen(app_port)
-console.log(`app is running. port: ${app_port}`)
-console.log(`http://127.0.0.1:${app_port}/`)
+const app_port = process.env.PORT || 5000
+const path = require('path');
+const dbConnection = require('./database');
+
+var express = require('express');
+var app =express();
+
+app.set('view engine','ejs');
+
+//homepage
+app.get('/',function(req,res){
+    res.render('index2');
+});
+
+//reg page
+app.get('/register',function (req,res){
+    res.render('register');
+});
+
+//login page
+
+app.get('/login',function(req,res){
+    res.render('login');
+});
+
+//logout
+
+
+
+
+        
+app.listen(process.env.PORT || 5000)
+    
