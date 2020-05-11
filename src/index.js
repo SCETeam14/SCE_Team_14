@@ -1,7 +1,6 @@
 
 const app_port = process.env.PORT || 5000
 const path = require('path');
-const dbConnection = require('./database');
 
 var express = require('express');
 var app =express();
