@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const app_port = process.env.PORT || 5000
 const path = require('path');
 const dbConnection = require('./database');
@@ -32,38 +32,3 @@ app.get('/login',function(req,res){
 
 
 app.listen(process.env.PORT || 5000)
-=======
-const app_port = process.env.PORT || 5000
-const path = require('path');
-
-
-var express = require('express');
-var app =express();
-
-app.set('view engine','ejs');
-
-//homepage
-app.get('/',function(req,res){
-    res.render('index2');
-});
-
-//reg page
-app.get('/register',function (req,res){
-    res.render('register');
-});
-
-//login page
-
-app.get('/login',function(req,res){
-    res.render('login');
-});
-
-//logout
-
-
-
-
-        
-app.listen(process.env.PORT || 5000)
-    
->>>>>>> a40ea7e1044ed75dae8ce64da0df7be1185a5557
