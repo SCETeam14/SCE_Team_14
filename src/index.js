@@ -6,10 +6,11 @@ var express = require('express');
 var app =express();
 
 app.set('view engine','ejs');
+app.use('/assets', express.static('assets'));
 
 //homepage
 app.get('/',function(req,res){
-    res.render('index2');
+    res.render('index');
 });
 
 //reg page
@@ -28,6 +29,5 @@ app.get('/login',function(req,res){
 
 
 
-        
+
 app.listen(process.env.PORT || 5000)
-    
