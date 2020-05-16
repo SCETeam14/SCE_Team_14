@@ -4,10 +4,8 @@ const express = require('express');
 var app =express();
 
 app.use(bodyParser.json());
-app.use(cors());
 var connection = require('./modules/db');
 var regcontrol = require('./controllers/regcontrol');
-const saltRounds = 10;
 app.set('view engine','ejs');
 app.use('/assets', express.static('assets'));
 app.use(bodyParser.urlencoded({ extended: false }));
