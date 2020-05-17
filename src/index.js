@@ -2,7 +2,7 @@ const path = require('path');
 var bodyParser = require('body-parser');
 const express = require('express');
 var app =express();
-
+app.use( express.static( "images" ) );
 app.use(bodyParser.json());
 var connection = require('./modules/db');
 var regcontrol = require('./controllers/regcontrol');
