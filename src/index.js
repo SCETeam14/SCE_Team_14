@@ -76,6 +76,10 @@ app.get('/shop',(req,res) => {
     res.render('shop');
 });
 
+app.get('/cart',(req,res) => {
+    res.render('cart');
+});
+
 
 
 
