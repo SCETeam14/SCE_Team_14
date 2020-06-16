@@ -5,9 +5,9 @@ const cors  =require('cors');
 const jwt = require('jsonwebtoken');
 const express = require('express');
 var app =express();
-
+app.use( express.static( "images" ) );
 app.use(bodyParser.json());
-app.use(cors());
+
 var connection = require('./modules/db');
 var regcontrol = require('./controllers/regcontrol');
 const saltRounds = 10;
@@ -17,8 +17,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var regcontrol =require('./controllers/regcontrol');
 
+
 //homepage
 app.get('/',(req,res) => {
+    console.log("Running...")
     res.render('index');
 });
 
@@ -78,8 +80,17 @@ connection.query(sql,(err,result)=>{
 //shop 
 
 app.get('/shop',(req,res) => {
+
+
+
     res.render('shop');
+    
 });
+
+app.get('/cart',(req,res) => {
+
+    res.render('cart');
+})
 
 
 

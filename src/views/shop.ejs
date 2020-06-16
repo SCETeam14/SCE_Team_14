@@ -1,17 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
+	
+    
     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
     <meta chatset = "utef-8" />
     <title> Shop </title>
      
  </head>
-<body>
+<body class="goto-here">
     <%- include('partials/nav'); %>
-        <h1>SHOP:</h1>
-        <p>PICK</p>
-   <script src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
- </body>
 
+    <section id="home-section" class="hero">
+    <div class="hero-wrap hero-bread" style="background-image: url('bg_1.jpg');">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center fadeInUp ftco-animated">
+          	<p class="breadcrumbs"><span class="mr-2"></span> </p>
+            <h1 class="mb-0 bread">Products</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-md-10 mb-5 text-center">
+    				<ul class="product-category">
+    					<li><a href="#" class="active">All</a></li>
+    					<li><a href="#">Drinks</a></li>
+    					<li><a href="#">Fruits</a></li>
+    					<li><a href="#">Dairy</a></li>
+    		
+    				</ul>
+    			</div>
+			</div>
+			<br>
+    		
+
+			<div class="row">
+				<div class="col-sm-6 col-md-4">
+				  <div class="Milk">
+					<img src="product-1.jpg" class="border" height="200" width="180" alt="...">
+					<div class="caption">
+					  <h3>Milk</h3>
+					  <p>5₪</p>
+					  <form method ="post" action="/cart">
+						<input type="submit" class="button success" value="Add to Cart"> 
+						
+					 </from>
+				  </div>
+				</div>
+			  </div>
+			  <br>
+
+			  <div class="row">
+				<div class="col-sm-6 col-md-4">
+				  <div class="Apple">
+					<img src="product-10.jpg" class="border" height="200" width="180" alt="...">
+					<div class="caption">
+					  <h3>Apple</h3>
+					  <p>3₪</p>
+					  <form method ="post" action="/cart">
+						<input type="submit" class="button success" value="Add to Cart"> 
+						
+					 </from>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <br>
+
+			  <div class="row">
+				<div class="col-sm-6 col-md-4">
+				  <div class="Juice">
+					<img src="product-8.jpg" class="border" height="200" width="180" alt="...">
+					<div class="caption">
+					  <h3>Juice</h3>
+					  <p>3₪</p>
+					  <form method ="post" action="/cart">
+					   <input type="submit" class="button success" value="Add to Cart"> 
+					   
+					</from>
+					</div>
+				  </div>
+				</div>
+			  </div>
+
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+   
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+   <script src="C:/SCE_Team_14/src/views/shop.js"></script>
+ </body>
 </html>
